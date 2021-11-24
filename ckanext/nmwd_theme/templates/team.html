@@ -1,0 +1,47 @@
+
+
+{% extends "page.html" %}
+
+
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Team'), controller='ckanext.wdi_theme.controller:WDIController', action='team' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+
+          <h1 class="page-heading">Team</h1>
+          <p>This multiyear project is a collaborative effort initially among the directing agencies listed in the legislation, with the support of several key partners. The implementation led by the NM Bureau of Geology and Mineral Resources, Stacy Timmons, with assistance from staff at the Bureau of Geology, Interstate Stream Commission and Sandia National Laboratories.</p>
+<p>The legislation was sponsored by State Representatives Melanie Stansbury, from Albuquerque and Gail Armstrong, from Magdalena. </p>
+<p>Software development and data systems management are provided by the Earth Data Analysis Center at the University of New Mexico (https://edac.unm.edu).</p>
+
+Directing Agencies:
+<ul>
+    <li><a target="_blank" href="https://geoinfo.nmt.edu/">New Mexico Bureau of Geology and Mineral Resources</a></li>
+    <li><a target="_blank" href="https://www.ose.state.nm.us/ISC/index.php">New Mexico Interstate Stream Commission</a></li>
+    <li><a target="_blank" href="https://www.ose.state.nm.us/">New Mexico Office of the State Engineer</a></li>
+    <li><a target="_blank" href="https://www.env.nm.gov/">New Mexico Environment Department</a></li>
+    <li><a target="_blank" href="http://www.emnrd.state.nm.us/">New Mexico Energy, Minerals, & Natural Resources</a></li>
+  </ul> 
+  Key Partners:
+  <ul>
+      <li><a target="_blank" href="https://www.sandia.gov/">Sandia National Laboratories</a></li>
+      <li><a target="_blank" href="http://www.wildlife.state.nm.us/">New Mexico Department of Game and Fish</a></li>
+      <li><a target="_blank" href="https://internetofwater.org/">Internet of Water at Duke University</a></li>
+      <li><a target="_blank" href="https://www.usgs.gov/">United States Geological Survey</a></li>
+      <li><a target="_blank" href="https://www.usbr.gov/">United States Bureau of Reclamation</a></li>
+      <li><a target="_blank" href="https://edac.unm.edu/">University of New Mexico, Earth Data Analysis Center</a></li>
+      <li>Healy Foundation</li>
+  </ul>
+
+
+
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}

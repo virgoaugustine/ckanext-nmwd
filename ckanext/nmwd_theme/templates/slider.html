@@ -1,0 +1,150 @@
+<style>
+    .slider {
+    background:url('/images/water3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider .row {
+    height: 535px;
+}
+.slider-center-box {
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.nmwd-box {
+    width: 212px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+
+}
+
+.new-mexico-box {
+    height: 48px;
+    background-color: #fff;
+    color: #323232;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.new-mexico-box > span {
+    width: 193px;
+    top: 2px;
+    left: 12px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.water-data-box {
+    background-color: #03789B;
+    width: 205px;
+    height: 48px;
+    color: #fff;
+    text-align: center;
+    top: 52px;
+ 
+}
+
+.water-data-box > span {
+    width: 180px;
+    top: 55px;
+    left: 12px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.nmwd-text > span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 23px;
+    text-shadow: 0px 4px 20px rgba(50,50,50,0.5);
+}
+
+.info-box {
+    margin-left: -10%;
+    margin-top: 50%;
+    width: 84px;
+    height: 250px;
+    background-color:#323232;
+}
+
+.child-info {
+    width: 84px;
+    height: 84px;
+    color: white;
+   
+}
+
+.child-info > .info-count {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+.child-info > .info-source {
+    font-size: 10px;
+    text-align: center;
+    display:block
+}
+
+.searchbar {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 53px;
+}
+
+.searchbar > span {
+    color: #fff;
+    font-weight: 800;
+}
+
+</style>
+<div class="slider container-fluid">
+    <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+            <div class="info-box">
+                <div class="child-info">
+                    <span class="info-count">{{h.nmwd_theme_topics_count()}}</span>
+                    <span class="info-source">TOPICS</span>
+                </div>
+                <div class="child-info">
+                    <span class="info-count">{{h.nmwd_theme_sources_count()}}</span>
+                    <span class="info-source">SOURCES</span>
+                </div>
+                <div class="child-info">
+                    <span class="info-count">{{h.nmwd_theme_datasets_count()}}</span>
+                    <span class="info-source">DATASETS</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="slider-center-box">
+                <div class="nmwd-box">
+                    <div class="new-mexico-box">
+                        <span>New Mexico</span>
+                    </div>
+                    <div class="water-data-box">
+                        <span>Water Data</span>
+                    </div>
+                    </div>
+            
+                    <div class="nmwd-text">
+                        <span>A collection of water data - <br>for effective water  management and planning.</span>
+                    </div>
+            
+                    <form action="/dataset">
+                    <div class="input-group searchbar">
+                        <input type="search" class="form-control" name="q" placeholder="Search datasets...">
+                        <span >Try <u>Water use</u> or <u>Groundwater Levels</u></span>
+                    </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+   
+</div>
+</div>
+

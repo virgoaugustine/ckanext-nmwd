@@ -1,0 +1,183 @@
+
+<style>
+
+.pop-datasets {
+    background:url('/images/tweets-section-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dt-box {
+    width: 346px;
+    height: 48px;
+    background-color: #fff;
+    color: #323232;
+    text-align: center;
+    margin-top: 98px;
+  }
+
+  .dt-box > span {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 40px;
+  }
+
+  .popular-dataset-box {
+    width: 326px;
+    height: 326px;
+    background: #fff;
+    border: 1px solid rgba(230, 225, 206, 0.38);
+    margin-top: 26px;
+  }
+
+  .dt-group-icon {
+    width: 119px; 
+    height:24px; 
+    background: #A51E22;
+    margin-left: -1px;
+    margin-top: 30px;
+    margin-bottom: 19px;
+  }
+
+  .dt-group-icon > span {
+    margin-left: 30px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: right;
+    color: #fff
+  }
+
+  .dt-title {
+    width: 241px;
+    height: 38px;
+    margin-left: 30px;
+    margin-right: 55px;
+    margin-bottom: 24px;
+  }
+
+  .dt-title > span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #323232;
+  }
+
+  .dt-description {
+    width: 247px;
+    height: 137px;
+    margin-left: 30px;
+    margin-right: 55px;
+
+  }
+
+  .dt-date {
+    margin-top: 14px;
+    width: 185px;
+    height: 22px;
+    margin-left: 180px;
+  }
+
+  .dt-date > span {
+    color: #1F2633;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+  }
+  /* ============================ */
+
+  .tweets-header{
+    margin-top: 100px;
+    margin-bottom: 70px;
+    width: 225px;
+    height: 51px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .tweets-header > span {
+    color: #323232;
+    width: 199px;
+    height: 46px;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 40px;
+  }
+
+  .tw-pic-box{
+    width: 337px;
+    height: 337px;
+    border: 1px solid #E6E1CE;
+    border-radius: 50%;
+    margin-bottom: 110px;
+  }
+
+  .tw-pic {
+    background:"https://newmexicowaterdata.org/wp-content/uploads/2020/04/newmexicowaterdatalogo.png";
+    width: 288px;
+    height: 288px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin: 24px;
+  }
+
+  .tweet {
+    height: 205px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    text-align:start;
+    margin-bottom: 5%;
+  }
+
+</style>
+
+
+<div class="container-fluid pop-datasets" style="margin-top:40px; margin-bottom:40px;">
+ 
+    <div class="dt-box">
+      <span>Most Popular Datasets</span>
+    </div>
+    <div class="row">
+      {% for dataset in h.nmwd_theme_popular_datasets() %}
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="popular-dataset-box">
+          <div class="dt-group-icon">
+            <span>{{dataset['groups'].display_name}}</span>
+          </div>
+          <div class="dt-title">
+              <span>{{dataset.title}}</span>
+          </div>
+          <div class="dt-description">
+            <span>{{dataset.notes}}</span>
+          </div>
+          <div class="dt-date">
+            <span>{{dataset.days_ago_modified}} days ago</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+
+    <div class="tweets-header">
+      <span>Latest Tweets</span>
+    </div>
+    <div class="row">
+      <div class="col-md-5 col-sm-12 col-xs-12">
+        <div class="tw-pic-box">
+          <div class="tw-pic"></div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-12 col-xs-12">
+        <div>
+          <div style="margin-bottom:30px;"><img src="/images/quotes.svg" ></img></div>
+          <div class="tweet"> This report highlights the need to prioritize water, increase access to high-quality water data, 
+            assessment of current water supply & demand and water resource risk, the role of climate change and more. 
+
+            #newmexico #newmexicowaterdata #water #waterdata #groundwater #waterpolicy</span>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>

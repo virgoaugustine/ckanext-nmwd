@@ -1,0 +1,36 @@
+{% extends "page.html" %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('News'), controller='ckanext.wdi_theme.controller:WDIController', action='news' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+
+          <h1 class="page-heading">News</h1>
+          
+          <h4>Check in here for news, updates, reports and other links!</h4><br>
+       
+          <!--<h6>New Mexico's progress on water data with support from Internet of Water:</h6>-->
+          <!--<iframe width="560" height="315" align="center" src="https://www.youtube.com/embed/qv2MjyhmDoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->   
+          <ul>
+            <li> <a target="_blank" href=https://nmwaterdata.atlassian.net/wiki/spaces/A1/pages/9502721/Meeting+Links>Water Data Workshop - April 28, 2020</a></li>
+            <li> <a target="_blank" href="/WaterDataPlan_April2020.pdf">2020 Water Data Plan</a></li>
+            <li> <a target="_blank" href="/Infographic_NMWaterDataPlan2020.pdf">Infographic 2020 Water Data Plan</a></li>
+            <li> <a target="_blank" href=https://www.youtube.com/watch?v=qv2MjyhmDoE&feature=emb_title>New Mexico's progress on water data with support from Internet of Water</a></li>
+            <li> <a target="_blank" href="/January 1 2020 Water Data Update.pdf">Water data Update for January 1, 2020</a></li>
+            <li> <a target="_blank" href="/Oct 2019_Water Workshop Summary.pdf">Water Data Workshop: Full Summary</a></li>
+            <li> <a target="_blank" href="/NMWDI_Flyer_FINAL.pdf">Water Data Workshop: Short Summary Graphic</a></li>  
+            <li> <a target="_blank" href="/Water Data Act_2019 HB651.pdf">New Mexico Enacts the Water Data Act in 2019 - legislation</a></li>         
+          </ul> 
+
+      
+
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
