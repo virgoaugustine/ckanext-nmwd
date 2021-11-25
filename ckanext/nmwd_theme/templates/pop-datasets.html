@@ -1,165 +1,26 @@
 
-<style>
 
-.pop-datasets {
-    background:url('/images/tweets-section-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.dt-box {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    width: 346px;
-    height: 48px;
-    background-color: #fff;
-    color: #323232;
-    text-align: center;
-    margin-top: 98px;
-  }
-
-  .dt-box > span {
-    font-size: 27px;
-    line-height: 40px;
-  }
-
-  .popular-dataset-box {
-    width: 326px;
-    height: 326px;
-    background: #fff;
-    border: 1px solid rgba(230, 225, 206, 0.38);
-    margin-top: 26px;
-    cursor: pointer;
-  }
-
-  .dt-group-icon {
-    width: 119px; 
-    height:24px; 
-    background: #A51E22;
-    margin-left: -1px;
-    margin-top: 30px;
-    margin-bottom: 19px;
-  }
-
-  .dt-group-icon > span {
-    margin-left: 30px;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: right;
-    color: #fff
-  }
-
-  .dt-title {
-    width: 241px;
-    height: 38px;
-    margin-left: 30px;
-    margin-right: 55px;
-    margin-bottom: 24px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    color: #323232;
-  }
-  .dt-description {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    color: #aaa;
-    width: 247px;
-    height: 137px;
-    margin-left: 30px;
-    margin-right: 55px;
-    overflow: hidden;
-
-
-  }
-
-  .dt-date {
-    margin-top: 14px;
-    width: 185px;
-    height: 22px;
-    margin-left: 180px;
-    color: #1F2633;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 19px;
-  }
-
+<div class="container-fluid pop-datasets"style="margin-top:40px; margin-bottom:40px;">
  
-  /* ============================ */
-
-  .tweets-header{
-    margin-top: 100px;
-    margin-bottom: 70px;
-    width: 225px;
-    height: 51px;
-    background-color: #fff;
-    text-align: center;
-
-    color: #323232;
-    width: 199px;
-    height: 46px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 40px;
-  }
-
-  .tw-pic-box{
-    width: 337px;
-    height: 337px;
-    border: 1px solid #E6E1CE;
-    border-radius: 50%;
-    margin-bottom: 110px;
-  }
-
-  .tw-pic {
-    background:url('https://pbs.twimg.com/profile_images/1364695382685589508/ilE_bRJ3_400x400.jpg');
-    background-size: cover;
-    width: 288px;
-    height: 288px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    margin: 24px;
-  }
-
-  .tweet {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 600;
-    height: 205px;
-    font-size: 20px;
-    line-height: 25px;
-    color: #fff;
-    text-align:start;
-    margin-bottom: 30px;
-  }
-
-</style>
-
-
-<div class="container-fluid pop-datasets" style="margin-top:40px; margin-bottom:40px;">
- 
-    <div class="dt-box">
-      <span>Most Popular Datasets</span>
-    </div>
-    <div class="row">
-      {% for dataset in h.nmwd_theme_popular_datasets() %}
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <div onclick="location.href='/dataset/{{dataset.title}}'" class="popular-dataset-box">
-          <div class="dt-group-icon">
-            <span>{{dataset.groups.display_name}}</span>
-          </div>
-          <div class="dt-title">{{dataset.title}}</div>
-          <div class="dt-description">{{dataset.notes}}</div>
-          <div class="dt-date">{{dataset.days_ago_modified}} days ago
+    <div class="container">
+      <div class="dt-box">
+        <span>Most Popular Datasets</span>
+      </div>
+      <div class="row">
+        {% for dataset in h.nmwd_theme_popular_datasets() %}
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div onclick="location.href='/dataset/{{dataset.title}}'" class="popular-dataset-box">
+            <div class="dt-group-icon">
+              <span>{{dataset.groups.display_name}}</span>
+            </div>
+            <div class="dt-title">{{dataset.title}}</div>
+            <div class="dt-description">{{dataset.notes}}</div>
+            <div class="dt-date">{{dataset.days_ago_modified}} days ago
+            </div>
           </div>
         </div>
+      {% endfor %}
       </div>
-    {% endfor %}
-    </div>
-
 
     <div class="tweets-header">Latest Tweets</div>
     <div class="row">
@@ -179,4 +40,5 @@
       </div>
     </div>
 </div>
-  </div>
+</div>
+</div>
