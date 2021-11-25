@@ -11,6 +11,10 @@
   making sitewide header changes it is preferable to override the header.html
   file.
   #}
+  {%- block loggedin %}
+  {% include "account-login.html" %}
+  {% endblock -%}
+  
   {%- block header %}
     {% include "header.html" %}
   {% endblock -%}
@@ -123,7 +127,7 @@
   file.
   #}
   {%- block footer %}
-    {% include "footer.html" %}
+    {% include "footer.html" %}x
   {% endblock -%}
 {%- endblock -%}
 

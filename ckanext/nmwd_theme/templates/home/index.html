@@ -4,7 +4,7 @@
 <head>
   <title>NM Water Data Initiative</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/wdi.css" /> 
 
@@ -14,10 +14,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
     integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
 
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
-<body style="display:none">
+<style>
+  #slider .container-fluid {
+    padding-left: 0;
+  }
+</style>
+
+<body style="display: none;">
 
   <div class="body-container">
     {%- block loggedin %}
@@ -44,16 +52,13 @@
 
     <section id="popular-datasets"> 
       {%- block popular_datasets %}
-      {% include "datasets-tweets.html" %}
+      {% include "pop-datasets.html" %}
       {% endblock -%} 
       </section>
 
-    <section id="footer">
       {%- block footer %}
       {% include "footer.html" %}
       {% endblock -%}
-    </section>
-
 
     {% block footer_debug %}
     {% if g.debug %}

@@ -1,11 +1,13 @@
 <style>
   .topic-box {
     padding: 20px;
-    height: 214px;
-    width: 231px;
+    height: 100%;
+    width: 100%;
     border: 1px solid rgba(230,225,206,0.3799999952316284);
     margin-top: 15px;
     margin-bottom: 15px;
+
+    cursor: pointer;
   }
 
   .topic-icon {
@@ -15,6 +17,8 @@
   }
 
   .topic-title {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
     display: block;
     color: #323232;
     font-weight: 600px;
@@ -25,11 +29,14 @@
   }
 
   .topic-description {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
     display:block;
     font-size: 15px;
     line-height: 19px;
     font-weight: normal;
     font-style:normal;
+    text-overflow:ellipsis ellipsis;
 
   }
 </style>
@@ -38,16 +45,12 @@
     <div class="row">
       {% for group in h.nwmd_theme_dataset_groups() %}
       <div class="col-md-3 col-sm-4 col-xs-6">
-    <div class="topic-box">
+    <div onclick="location.href='/group/{{group.name}}'" class="topic-box">
       <div class="topic-icon">
-        <img src='/images/wicon.svg' alt="water use icon">
+        <img src="{{group.image_display_url}}" alt="group icon">
       </div>
-      <div class="topic-title">
-        <span>{{group.title}}</span>
-      </div>
-      <div class="topic-description">
-        <span>{{group.description}}</span>
-      </div>
+      <div class="topic-title">{{group.title}}</div>
+      <div class="topic-description">{{group.description}}</div>
     </div>
   </div>
   {% endfor %}

@@ -1,23 +1,26 @@
 <style>
+   
     .slider {
     background:url('/images/water3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    height: 535px;
 }
 
 .slider .row {
     height: 535px;
 }
 .slider-center-box {
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 140px;
 }
 .nmwd-box {
     width: 212px;
     height: 100px;
     margin-bottom: 20px;
     margin-left: 0px;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
 }
 
 .new-mexico-box {
@@ -33,7 +36,6 @@
     top: 2px;
     left: 12px;
     font-size: 30px;
-    font-weight: bolder;
 }
 
 .water-data-box {
@@ -55,6 +57,8 @@
 }
 
 .nmwd-text > span {
+    font-family: 'Mulish', sans-serif;
+    font-family: 800;
     color: #fff;
     font-size: 18px;
     font-weight: 800;
@@ -63,8 +67,12 @@
 }
 
 .info-box {
-    margin-left: -10%;
-    margin-top: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    float: left;
+    left: 0;
+    margin-top: 130px;
     width: 84px;
     height: 250px;
     background-color:#323232;
@@ -97,14 +105,15 @@
 
 .searchbar > span {
     color: #fff;
+    font-family: 'Mulish', sans-serif;
     font-weight: 800;
 }
 
 </style>
-<div class="slider container-fluid">
-    <div class="row">
-        <div class="col-md-3 hidden-sm hidden-xs">
-            <div class="info-box">
+<div class="container-fluid slider">
+  <div class="row">
+    <div class="col-md-3 col-sm-11 col-xs-11"></div>
+            <div class="info-box hidden-sm hidden-xs">
                 <div class="child-info">
                     <span class="info-count">{{h.nmwd_theme_topics_count()}}</span>
                     <span class="info-source">TOPICS</span>
@@ -118,8 +127,8 @@
                     <span class="info-source">DATASETS</span>
                 </div>
             </div>
-        </div>
-        <div class="col-md-9">
+       
+            <div class="col-md-9 col-sm-11 col-xs-11 pull-right">
             <div class="slider-center-box">
                 <div class="nmwd-box">
                     <div class="new-mexico-box">
@@ -129,7 +138,6 @@
                         <span>Water Data</span>
                     </div>
                     </div>
-            
                     <div class="nmwd-text">
                         <span>A collection of water data - <br>for effective water  management and planning.</span>
                     </div>
@@ -141,10 +149,9 @@
                     </div>
                     </form>
                 </div>
+            </div>
         </div>
-    </div>
 </div>
+
    
-</div>
-</div>
 

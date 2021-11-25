@@ -8,6 +8,8 @@
 }
 
 .dt-box {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     width: 346px;
     height: 48px;
     background-color: #fff;
@@ -17,7 +19,6 @@
   }
 
   .dt-box > span {
-    font-weight: bold;
     font-size: 27px;
     line-height: 40px;
   }
@@ -28,6 +29,7 @@
     background: #fff;
     border: 1px solid rgba(230, 225, 206, 0.38);
     margin-top: 26px;
+    cursor: pointer;
   }
 
   .dt-group-icon {
@@ -54,20 +56,22 @@
     margin-left: 30px;
     margin-right: 55px;
     margin-bottom: 24px;
-  }
-
-  .dt-title > span {
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
     color: #323232;
   }
-
   .dt-description {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    color: #aaa;
     width: 247px;
     height: 137px;
     margin-left: 30px;
     margin-right: 55px;
+    overflow: hidden;
+
 
   }
 
@@ -76,14 +80,14 @@
     width: 185px;
     height: 22px;
     margin-left: 180px;
-  }
-
-  .dt-date > span {
     color: #1F2633;
-    font-weight: normal;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
     font-size: 15px;
     line-height: 19px;
   }
+
+ 
   /* ============================ */
 
   .tweets-header{
@@ -93,13 +97,12 @@
     height: 51px;
     background-color: #fff;
     text-align: center;
-  }
 
-  .tweets-header > span {
     color: #323232;
     width: 199px;
     height: 46px;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     font-size: 27px;
     line-height: 40px;
   }
@@ -113,7 +116,8 @@
   }
 
   .tw-pic {
-    background:"https://newmexicowaterdata.org/wp-content/uploads/2020/04/newmexicowaterdatalogo.png";
+    background:url('https://pbs.twimg.com/profile_images/1364695382685589508/ilE_bRJ3_400x400.jpg');
+    background-size: cover;
     width: 288px;
     height: 288px;
     border: 5px solid #fff;
@@ -122,12 +126,14 @@
   }
 
   .tweet {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
     height: 205px;
     font-size: 20px;
     line-height: 25px;
     color: #fff;
     text-align:start;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
   }
 
 </style>
@@ -141,18 +147,13 @@
     <div class="row">
       {% for dataset in h.nmwd_theme_popular_datasets() %}
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="popular-dataset-box">
+        <div onclick="location.href='/dataset/{{dataset.title}}'" class="popular-dataset-box">
           <div class="dt-group-icon">
-            <span>{{dataset['groups'].display_name}}</span>
+            <span>{{dataset.groups.display_name}}</span>
           </div>
-          <div class="dt-title">
-              <span>{{dataset.title}}</span>
-          </div>
-          <div class="dt-description">
-            <span>{{dataset.notes}}</span>
-          </div>
-          <div class="dt-date">
-            <span>{{dataset.days_ago_modified}} days ago</span>
+          <div class="dt-title">{{dataset.title}}</div>
+          <div class="dt-description">{{dataset.notes}}</div>
+          <div class="dt-date">{{dataset.days_ago_modified}} days ago
           </div>
         </div>
       </div>
@@ -160,9 +161,7 @@
     </div>
 
 
-    <div class="tweets-header">
-      <span>Latest Tweets</span>
-    </div>
+    <div class="tweets-header">Latest Tweets</div>
     <div class="row">
       <div class="col-md-5 col-sm-12 col-xs-12">
         <div class="tw-pic-box">
