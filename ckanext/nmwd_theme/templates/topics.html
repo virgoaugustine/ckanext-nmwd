@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/topics.css">
+
+<div class="container-fluid" style="margin-top:40px; margin-bottom:40px;">
+  <div style="margin-left: 24px; margin-right: -95px;">
+    {% set firstRow = h.nwmd_theme_dataset_groups()[:5] %}
+    {% set secondRow = h.nwmd_theme_dataset_groups()[5:] %}
+    <div class="row"  id='firstRow'>
+      {% for group in firstRow %}
+        <div class="col-md-2">
+          <div onclick="location.href='/group/{{group.name}}'" class="topic-box">
+            <div class="topic-icon">
+              <img src="{{group.image_display_url}}" alt="group icon">
+            </div>
+            <div class="topic-title">{{group.title}}</div>
+            <div class="topic-description">{{group.description}}</div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="row" id="secondRow">
+    {% for group in secondRow %}
+      <div class="col-md-2">
+        <div onclick="location.href='/group/{{group.name}}'" class="topic-box">
+          <div class="topic-icon">
+            <img src="{{group.image_display_url}}" alt="group icon">
+          </div>
+          <div class="topic-title">WATER USE</div>
+          <div class="topic-description">{{group.description}}</div>
+      </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

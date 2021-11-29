@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/hero.css">
+<div class="container-fluid slider">
+  <div class="row">
+    <div class="col-md-3 col-sm-11 col-xs-11"></div>
+            <div class="info-box hidden-sm hidden-xs">
+                <div class="child-info">
+                    <span class="info-count" style="margin-top:10%;">{{h.nmwd_theme_topics_count()}}</span>
+                    <span class="info-source">TOPICS</span>
+                </div>
+                <div class="child-info">
+                    <span class="info-count">{{h.nmwd_theme_sources_count()}}</span>
+                    <span class="info-source">SOURCES</span>
+                </div>
+                <div class="child-info">
+                    <span class="info-count">{{h.nmwd_theme_datasets_count()}}</span>
+                    <span class="info-source">DATASETS</span>
+                </div>
+            </div>
+       
+            <div class="col-md-9 col-sm-11 col-xs-11 pull-right">
+            <div class="slider-center-box">
+                <div class="nmwd-box">
+                    <div class="new-mexico-box">
+                        <span>New Mexico</span>
+                    </div>
+                    <div class="water-data-box">
+                        <span>Water Data</span>
+                    </div>
+                    </div>
+                    <div class="nmwd-text">
+                        <span>A collection of water data - <br>for effective water  management and planning.</span>
+                    </div>
+            
+                    <form action="/dataset">
+                    <div class="input-group searchbar">
+                        <input type="search" class="form-control" name="q" placeholder="Search datasets...">
+                        <span >Try <u>Water use</u> or <u>Groundwater Levels</u></span>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+
+   
+

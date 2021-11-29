@@ -1,0 +1,41 @@
+
+
+{% extends "page.html" %}
+
+
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('FAQ'), controller='ckanext.wdi_theme.controller:WDIController', action='faq' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+      <h1 class="page-heading">FAQ</h1>
+      <br><h4>What water data can be found through this site?</h4>
+      This site is just getting started! We aim to provide data on water quantity, water quality, and water use, at a minimum. Other data topics include water quality, water quantity, water use, climate, energy, ecosystems & wildlife, natural hazards, water planning, and infrastructure.  
+      
+          <br><h4>I have water data that I’d like to share, how do I do this?</h4>
+      
+      Please contact us through the Contact tab. 
+      
+      Ideally we wish to collect data that is digital, machine readable, open for sharing without restriction, and has clear definitions (data dictionary), and metadata. We will ask you to fill out a metadata form and select data TAGS (to help others find your data) when you submit the data. Data that is in spreadsheet format and other tabular formats are also accepted.
+      
+       A data dictionary is the text description of all the data fields (i.e. column headings or rows, and abbreviations used in the dataset). In addition to a data dictionary, we need to have this minimum of metadata: Who collected the data; What is the data about; Where is the data hosted; Over what time period does the data cover; and, For what purpose was the data collected?
+      
+          <br><h4>What’s the difference between DATA and INFORMATION? </h4>
+      We define “water data” as the facts, the actual measurements or properties, whereas “information” is used to describe the assembly of water data in an interpretation, model or analysis. Water data are analogous to the building blocks, while information is the object that is constructed from those blocks. Water data may include reservoir levels, groundwater levels or measurements of arsenic in water, while the information we can gain from this type of data may be graphs of trends in levels or maps of locations where arsenic occurs. 
+          <br><h4>How are you collaborating with others to accomplish this?</h4>
+      The most important collaboration in this effort thus far has been among the directing agencies, and agency partners. In the past it was difficult to share data between agencies, or even between divisions of a single agency. Communication and education on our data challenges and opportunities will continue to be a priority going forward. We are working closely with the Internet of Water, a project based out of Duke University. We are also in communications with the Western States Water Council as they work to improve the Water Data Exchange (WaDE).  Also, as New Mexico works to build a 50-Year Water Plan, this water data service will continue to support the data needs, making the development of this plan more efficient.
+          <br><h4>Are we there yet? </h4>
+      There is no blueprint for how to do this - New Mexico is only the 2nd state in the country to have policy directing water data to be shared and interoperable. It is expected to take several years to develop the data catalog and platform for New Mexico’s Water Data. As we begin to bring water data into the open, we are better able to see where we have data, and where we do not. It will illuminate some of the issues we have with how our data are structured that will undoubtedly take some time to revise. It will be a process of taking steps in a forward direction, learning from those steps, revising the plan for the next steps - and moving forward. The more data we share, the more we can do with the data. 
+
+
+
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
