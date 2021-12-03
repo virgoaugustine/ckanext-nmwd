@@ -18,7 +18,7 @@
     height: 100px;
     margin-bottom: 20px;
     margin-left: 0px;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: 800;
 }
 
@@ -46,8 +46,8 @@
 
 
 .nmwd-text > span {
-    font-family: 'Mulish', sans-serif;
-    font-family: 800;
+    /* font-family: 'Mulish', sans-serif; */
+    font-weight: 800;
     color: #fff;
     font-size: 18px;
     font-weight: 800;
@@ -56,7 +56,7 @@
 }
 
 .info-box {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: 600;
     position: absolute;
     float: left;
@@ -94,6 +94,6 @@
 
 .searchbar > span {
     color: #fff;
-    font-family: 'Mulish', sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
     font-weight: 800;
 }

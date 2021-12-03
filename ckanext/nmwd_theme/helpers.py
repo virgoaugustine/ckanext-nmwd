@@ -29,23 +29,17 @@ def datasets_count():
     return len(datasets)
 
 
-def popular_datasets(limit=3):
+def popular_datasets():
     '''Return the most popular datasets'''
-    try:
-        pkg_search_results = toolkit.get_action('package_search')(data_dict={
-            'sort': 'metadata_modified desc',
-            'rows': limit,
-        })['results']
-    except:
-        return []
-    else:
-        pkgs = []
-        for pkg in pkg_search_results:
-            package = toolkit.get_action('package_show')(
-                data_dict={'id': pkg['id']})
-            modified = datetime.strptime(
-                package['metadata_modified'].split('T')[0], '%Y-%m-%d')
-            package['uploaded'] = modified.strftime('%d %b %Y')
-            pkgs.append(package)
-        return pkgs
+    ds = ['public-water-supply-areas', 'water-use', 'collaborative-groundwater-monitoring-network']
+
+    pkgs = []
+    for dataset_id in ds:
+        package = toolkit.get_action('package_show')(
+            data_dict={'id': dataset_id})
+        modified = datetime.strptime(
+            package['metadata_modified'].split('T')[0], '%Y-%m-%d')
+        package['uploaded'] = modified.strftime('%d %b %Y')
+        pkgs.append(package)
+    return pkgs
 

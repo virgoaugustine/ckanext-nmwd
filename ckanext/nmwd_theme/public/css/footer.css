@@ -1,5 +1,5 @@
 .footer-links > li {
-    font-family: 'Mulish', sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
     font-weight: 400;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -11,7 +11,7 @@
   }
   
   footer h5{ 
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: 600;
     font-size: 15px;
     line-height: 1.5;
@@ -50,7 +50,7 @@
   }
   
   .subscribe-section > span {
-    font-family: 'Mulish', sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
     font-weight: 400;
     color: #aaa;
   }

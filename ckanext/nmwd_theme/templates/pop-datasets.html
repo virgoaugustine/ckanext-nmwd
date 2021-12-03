@@ -7,24 +7,25 @@
         <span>Most Popular Datasets</span>
       </div>
       <div class="row">
+        {% set colors = ['#03789B', '#81824E', '#A51E22']%}
         {% for dataset in h.nmwd_theme_popular_datasets() %}
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div onclick="location.href='/dataset/{{dataset.name}}'" class="popular-dataset-box">
-            <div class="dt-group-icon">
+            <div class="dt-group-icon" style = "background: {{colors[loop.index-1]}}">
               {% set group = dataset.groups|first %}
               <span>{{group['display_name']}}</span>
             </div>
             <div class="dt-title">{{dataset.title}}</div>
             <div class="dt-description">{{dataset.notes}}</div>
-            <div class="dt-date">
-              <img src="/images/download-icon.svg">&nbsp;435 &nbsp; &nbsp; &nbsp;
+            <div class="dt-date pull-right">
+              <!-- <img src="/images/download-icon.svg">&nbsp;435 &nbsp; &nbsp; &nbsp; -->
               <img src="/images/dates-icon.svg">&nbsp;{{dataset.uploaded}}
             </div>
           </div>
         </div>
       {% endfor %}
       </div>
-
+ 
     <div class="tweets-header">Latest Tweets</div>
     <div class="row tweets-section">
       <div class="col-md-5 col-sm-12 col-xs-12">
