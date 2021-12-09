@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% ckan_extends %}
 
 {%- block page -%}
 
@@ -11,11 +11,8 @@
   making sitewide header changes it is preferable to override the header.html
   file.
   #}
-  {%- block loggedin %}
-  {% include "account-login.html" %}
-  {% endblock -%}
-  
   {%- block header %}
+    {% include "account-login.html" %}
     {% include "header.html" %}
   {% endblock -%}
 
@@ -127,7 +124,7 @@
   file.
   #}
   {%- block footer %}
-    {% include "footer.html" %}x
+    {% include "footer.html" %}
   {% endblock -%}
 {%- endblock -%}
 

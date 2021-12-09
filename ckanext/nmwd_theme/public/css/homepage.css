@@ -1,0 +1,336 @@
+
+/* ========================================== 
+    HERO.CSS
+   ==========================================
+*/
+.slider {
+    background:url('/images/elvado.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 535px;
+    width: 100%;
+    
+}
+.slider .row {
+    height: 535px;
+}
+.slider-center-box {
+    margin-top: 140px;
+}
+.nmwd-box {
+    width: 212px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 800;
+}
+
+.new-mexico-box {
+    height: 48px;
+    background-color: #fff;
+    color: #323232;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.water-data-box {
+    background-color: #03789B;
+    width: 205px;
+    height: 48px;
+    color: #fff;
+    text-align: center;
+    top: 52px;
+    font-size: 30px;
+    line-height: 50px;
+ 
+}
+
+
+.nmwd-text > span {
+    /* font-family: 'Mulish', sans-serif; */
+    font-weight: 800;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-shadow: 0px 4px 20px rgba(50,50,50,0.5);
+}
+
+.info-box {
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 600;
+    position: absolute;
+    float: left;
+    left: 0;
+    margin-top: 130px;
+    width: 84px;
+    height: 250px;
+    background-color:#323232;
+}
+
+.child-info {
+    width: 84px;
+    height: 84px;
+    color: white;
+   
+}
+
+.child-info > .info-count {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+.child-info > .info-source {
+    font-size: 10px;
+    text-align: center;
+    display:block
+}
+
+.searchbar {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 53px;
+}
+
+.searchbar > span {
+    color: #fff;
+    /* font-family: 'Mulish', sans-serif; */
+    font-weight: 800;
+}
+
+/* ========================================== 
+    END OF HERO.CSS
+   ==========================================
+*/
+
+/* ========================================== 
+    POP-DATASETS.CSS
+   ==========================================
+*/
+.pop-datasets {
+  background:url('/images/tweets-section-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.dt-box {
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 700;
+  width: 346px;
+  height: 48px;
+  background-color: #fff;
+  color: #323232;
+  text-align: center;
+  margin-top: 98px;
+}
+
+.dt-box > span {
+  font-size: 27px;
+  line-height: 50px;
+}
+
+.popular-dataset-box {
+  width: 326px;
+  height: 326px;
+  background: #fff;
+  border: 1px solid rgba(230, 225, 206, 0.38);
+  margin-top: 26px;
+  cursor: pointer;
+}
+
+
+.dt-group-icon {
+  width: 45%; 
+  height:24px; 
+  margin-left: -1px;
+  margin-top: 30px;
+  margin-bottom: 19px;
+  line-height: 25px;
+}
+
+.dt-group-icon > span {
+  display:inline-block;
+  margin-left: 10%;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+.dt-title {
+  width: 241px;
+  height: 38px;
+  margin-left: 30px;
+  margin-right: 55px;
+  margin-bottom: 24px;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #323232;
+}
+.dt-description {
+  /* font-family: 'Mulish', sans-serif; */
+  font-weight: 400;
+  color: #aaa;
+  width: 247px;
+  height: 137px;
+  margin-left: 30px;
+  margin-right: 55px;
+  overflow: hidden;
+
+
+}
+
+.dt-date {
+  margin-top: 14px;
+  margin-left: 30px;
+  margin-right: 55px;
+  color: #1F2633;
+  /* font-family: 'Mulish', sans-serif; */
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* ============================ */
+
+.tweets-header{
+  margin-top: 100px;
+  margin-bottom: 70px;
+  width: 225px;
+  height: 51px;
+  background-color: #fff;
+  text-align: center;
+
+  color: #323232;
+  width: 199px;
+  height: 46px;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 50px;
+}
+
+.tw-pic-box{
+  width: 337px;
+  height: 337px;
+  border: 1px solid #E6E1CE;
+  border-radius: 50%;
+  margin-bottom: 110px;
+}
+
+.tw-pic {
+  background:url('https://pbs.twimg.com/profile_images/1364695382685589508/ilE_bRJ3_400x400.jpg');
+  background-size: cover;
+  width: 288px;
+  height: 288px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin: 24px;
+}
+
+#tweet-box{
+  /* font-family: 'Mulish', sans-serif; */
+  font-weight: 200;
+  height: 205px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+  text-align:start;
+}
+
+#tweet-box a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.prev-next{
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+
+}
+.prev-next a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ========================================== 
+    END OF POP-DATASETS.CSS
+   ==========================================
+*/
+
+/* ========================================== 
+    TOPICS.CSS
+   ==========================================
+*/
+@media screen and (min-width: 1200px ){
+  #secondRow{
+    margin-left: 150px;
+  }
+  #secondRow > .col-md-2 {
+    width: 19%;
+  }
+}
+
+#firstRow > div:nth-of-type(1) > .topic-box {background-color: #03789B;}
+#firstRow > div:nth-of-type(1) > .topic-box > .topic-title{color:#fff;}
+#firstRow > div:nth-of-type(1) > .topic-box > .topic-description{color:#fff;}
+
+  .topic-box {
+  padding: 20px;
+  height: 215px;
+  width: 231px;
+  border: 1px solid rgba(230,225,206,0.3799999952316284);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  cursor: pointer;
+}
+
+.topic-icon {
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+.topic-title {
+  /* font-family: 'Poppins',sans-serif; */
+  font-weight: 600;
+  display: block;
+  color: #323232;
+  font-weight: 600px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+
+}
+
+.topic-description {
+  /* font-family: 'Mulish', sans-serif; */
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #AAA;
+
+}
+/* ========================================== 
+    END OF TOPICS.CSS
+   ==========================================
+*/
+

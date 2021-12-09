@@ -1,73 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "page.html" %}
 
-<head>
-  <title>NM Water Data Initiative</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-  <link rel="stylesheet" href="/wdi.css" /> 
+{% block title%} NM Water Data Initiative {% endblock %}
+
+{% block content %}
+
+{% include "home/hero.html" %}
+{% include "home/topics.html" %}
+{% include "home/pop-datasets.html" %}
+
+{% endblock %}
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-    integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;600;800&display=swap" rel="stylesheet">
-</head>
-
-<style>
-  #slider .container-fluid {
-    padding-left: 0;
-  }
-</style>
-
-<body>
-
-  <div class="body-container">
-    {%- block loggedin %}
-    {% include "account-login.html" %}
-    {% endblock -%}
-
-    <section id="header">
-    {%- block header %}
-    {% include "header.html" %}
-    {% endblock -%}
-    </section>
-
-    <section id="hero">
-    {%- block hero %}
-    {% include "hero.html" %}
-    {% endblock -%}
-    </section>
-
-    <section id="topics"> 
-    {%- block topics %}
-    {% include "topics.html" %}
-    {% endblock -%} 
-    </section>
-
-    <section id="popular-datasets"> 
-      {%- block popular_datasets %}
-      {% include "pop-datasets.html" %}
-      {% endblock -%} 
-      </section>
-
-      {%- block footer %}
-      {% include "footer.html" %}
-      {% endblock -%}
-
-    {% block footer_debug %}
-    {% if g.debug %}
-      {% include 'snippets/debug.html' %}
-    {% endif %}
-  {% endblock %}
-</div>
-
-</body>
-
-</html>
